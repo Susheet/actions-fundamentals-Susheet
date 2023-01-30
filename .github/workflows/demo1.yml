@@ -1,0 +1,22 @@
+name: My first Workflow
+on: 
+  push:
+      branches:
+        - main
+  issues:
+       types: [opened, reopened]
+  
+  schedule:
+       - cron: '* * * * *'
+       
+  workflow_dispatch:
+jobs:
+   my-first-job:
+     runs-on: ubuntu-latest
+     
+     steps:
+       - run: echo "Hello Susheet"
+       
+ 
+       
+       
